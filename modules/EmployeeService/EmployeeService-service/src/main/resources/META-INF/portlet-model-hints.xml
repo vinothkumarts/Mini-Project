@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.employee.service.model.Employee">
+		<field name="uuid" type="String" />
+		<field name="employeeId" type="long" />
+		<field name="employeeName" type="String" />
+		<field name="mobile" type="String" />
+		<field name="email" type="String" />
+		<field name="uploadPhoto" type="long" />
+		<field name="currentDesignation" type="String" />
+		<field name="department" type="String" />
+	</model>
+</model-hints>

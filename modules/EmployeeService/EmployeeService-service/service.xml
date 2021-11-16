@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.employee.service">
+	<namespace>EMPLOYEE</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Employee" remote-service="true" uuid="true" table="employee_info">
+
+		<!-- PK fields -->
+
+		<column name="employeeId" primary="true" type="long" id-type="increment"/>
+		
+		<!-- Other fields -->
+		
+		<column name="employeeName" type="String" />
+		<column name="mobile" type="String" />
+		<column name="email" type="String" />
+		<column name="uploadPhoto" type="long" />
+		<column name="currentDesignation" type="String" />
+		<column name="department" type="String" />
+
+		<!-- Finder methods -->
+
+		<finder name="EmployeeName" return-type="Collection">
+			<finder-column name="employeeName" />
+		</finder>
+
+	</entity>
+</service-builder>
